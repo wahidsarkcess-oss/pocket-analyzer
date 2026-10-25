@@ -1,0 +1,157 @@
+/* POCKET ANALYZER — PREMIUM TRADING TERMINAL */
+
+:root {
+    --pa-bg: #080d19;
+    --pa-panel: #101827;
+    --pa-panel-soft: #131f31;
+    --pa-border: #26364b;
+    --pa-text: #e7edf7;
+    --pa-muted: #91a2b9;
+    --pa-green: #10b981;
+    --pa-green-hover: #059669;
+    --pa-blue: #38bdf8;
+}
+
+.stApp {
+    background:
+        radial-gradient(ellipse at 12% 0%, rgba(16, 185, 129, 0.08), transparent 32%),
+        var(--pa-bg);
+    color: var(--pa-text);
+}
+
+[data-testid="stHeader"] {
+    background: rgba(8, 13, 25, 0.88);
+}
+
+[data-testid="stSidebar"] {
+    background: #0d1524;
+    border-right: 1px solid var(--pa-border);
+}
+
+[data-testid="stSidebar"] > div {
+    background: transparent;
+}
+
+h1, h2, h3, h4 {
+    color: #f8fafc !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.025em;
+}
+
+p, label, span {
+    color: #cbd5e1;
+}
+
+small, [data-testid="stCaptionContainer"] {
+    color: var(--pa-muted) !important;
+}
+
+/* Premium metric cards */
+[data-testid="stMetric"] {
+    background: linear-gradient(145deg, #121e30, #0e1726);
+    border: 1px solid var(--pa-border);
+    padding: 18px 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: rgba(16, 185, 129, 0.55);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--pa-muted) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--pa-green) !important;
+    font-weight: 750 !important;
+}
+
+/* Buttons */
+.stButton > button,
+.stDownloadButton > button {
+    background: linear-gradient(135deg, var(--pa-green), var(--pa-green-hover));
+    color: #ffffff;
+    border: 1px solid rgba(110, 231, 183, 0.2);
+    border-radius: 10px;
+    padding: 0.65rem 1.1rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background: #047857;
+    color: #ffffff;
+    border-color: #34d399;
+    box-shadow: 0 5px 18px rgba(16, 185, 129, 0.18);
+}
+
+/* Inputs and selectors */
+[data-baseweb="select"] > div,
+[data-baseweb="input"] > div,
+[data-baseweb="textarea"] > div {
+    background-color: #111c2d;
+    border-color: var(--pa-border);
+    border-radius: 9px;
+}
+
+input, textarea {
+    color: var(--pa-text) !important;
+}
+
+/* Alerts and data tables */
+[data-testid="stAlert"] {
+    border-radius: 12px;
+    border: 1px solid var(--pa-border);
+}
+
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--pa-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Expanders and tabs */
+[data-testid="stExpander"] {
+    background: rgba(16, 24, 39, 0.72);
+    border: 1px solid var(--pa-border);
+    border-radius: 12px;
+}
+
+button[data-baseweb="tab"] {
+    font-weight: 600;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--pa-green) !important;
+}
+
+/* Dividers and layout spacing */
+hr {
+    border-color: var(--pa-border);
+}
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 700px) {
+    .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1.2rem;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 14px;
+        border-radius: 11px;
+    }
+}
